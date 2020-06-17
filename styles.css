@@ -1,0 +1,13 @@
+body {
+  padding: 0px;
+}
+
+#title {
+  text-align: center;
+  float: none;
+}
+#canvasLeftPos {
+  float: left;
+  /*background-color: red;*/
+  height: 10px;
+}
