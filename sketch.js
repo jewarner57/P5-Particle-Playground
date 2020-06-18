@@ -1,4 +1,5 @@
 let player;
+let asteroid;
 let xSpeed = 0;
 let ySpeed = 0;
 
@@ -6,6 +7,8 @@ function setup() {
   createCanvas(800, 600);
 
   player = new Player(500, 300, 50, 20, 0);
+  asteroid = new Asteroid(100, 100, 1);
+  asteroid.createChunks()
 }
 
 function draw() {
@@ -22,6 +25,8 @@ function draw() {
       player.particles.splice(i, 1);
     }
   }
+
+  asteroid.display()
 
   fill(255);
   player.display();

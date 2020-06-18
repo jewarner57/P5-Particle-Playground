@@ -12,7 +12,7 @@ class Asteroid {
 
     this.createChunks = function () {
       for (let i = 0; i < chunkCount; i++) {
-        this.chunks.push(new RockChunk(0, 0));
+        this.chunks.push(new TriangularParticle(this.x, this.y));
       }
     };
   }
