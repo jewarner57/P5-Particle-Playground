@@ -7,7 +7,7 @@ function setup() {
   createCanvas(800, 600);
 
   player = new Player(500, 300, 50, 20, 0);
-  asteroid = new Asteroid(100, 100, 1);
+  asteroid = new Asteroid(100, 100, 200);
   asteroid.createChunks()
 }
 
