@@ -8,7 +8,7 @@ function setup() {
 
   player = new Player(500, 300, 50, 20, 0);
   asteroid = new Asteroid(100, 100, 200);
-  asteroid.createChunks()
+  asteroid.createChunks();
 }
 
 function draw() {
@@ -26,7 +26,7 @@ function draw() {
     }
   }
 
-  asteroid.display()
+  asteroid.display();
 
   fill(255);
   player.display();
