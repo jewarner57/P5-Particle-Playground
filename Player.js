@@ -14,6 +14,7 @@ class Player {
       translate(this.x, this.y);
       angleMode(DEGREES);
       rotate(this.rotation);
+      fill(255);
       noStroke();
 
       rect(0, 0, this.width, this.height);
@@ -29,8 +30,6 @@ class Player {
       this.getAngleSpeed();
       this.x += xSpeed;
       this.y += ySpeed;
-
-      this.spawnParticles();
     };
 
     this.spawnParticles = function () {
@@ -48,6 +47,15 @@ class Player {
     this.getAngleSpeed = function () {
       xSpeed = this.speed * cos(this.rotation);
       ySpeed = this.speed * sin(this.rotation);
+    };
+
+    this.drawParticles = function () {
+      for (let i = 0; i < this.particles.length; i++) {
+        this.particles[i].display();
+        if (this.particles[i].remainingLife < 0) {
+          this.particles.splice(i, 1);
+        }
+      }
     };
   }
 }

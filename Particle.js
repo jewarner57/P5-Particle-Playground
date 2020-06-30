@@ -15,8 +15,8 @@ class Particle {
       rotate(this.rotation);
       fill(0, Math.random() * 150, 255);
       ellipse(
-        xOffset,
-        yOffset,
+        this.xOffset,
+        this.yOffset,
         (Math.random() * 7 + 3) * (this.remainingLife / this.maxLife) + 0.5,
         (Math.random() * 7 + 3) * (this.remainingLife / this.maxLife) + 0.5
       );
